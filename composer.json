@@ -1,5 +1,5 @@
 {
-    "name": "aura/web-project",
+    "name": "aura/framework-project",
     "type": "project",
     "description": "A minimal web+CLI framework built from Aura v2 packages",
     "keywords": [
