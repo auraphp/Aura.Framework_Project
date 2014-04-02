@@ -8,14 +8,33 @@
     "license": "BSD-2-Clause",
     "authors": [
         {
-            "name": "Paul M. Jones",
-            "email": "pmjones88@gmail.com",
-            "homepage": "https://github.com/pmjones"
+            "name": "Aura.Framework_Project Contributors",
+            "homepage": "https://github.com/auraphp/Aura.Framework_Project/contributors"
         }
     ],
     "minimum-stability": "dev",
     "require": {
-        "aura/cli-kernel": "2.*@dev",
-        "aura/web-kernel": "2.*@dev"
+        "aura/cli-kernel": "dev-reduced",
+        "aura/web-kernel": "dev-reduced",
+        "monolog/monolog": "1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        },
+        "psr-4": {
+            "Aura\\Framework_Project\\_Config\\": "config/"
+        }
+    },
+    "extra": {
+        "aura": {
+            "type": "project",
+            "config": {
+                "common": "Aura\\Framework_Project\\_Config\\Common",
+                "dev": "Aura\\Framework_Project\\_Config\\Dev",
+                "test": "Aura\\Framework_Project\\_Config\\Test",
+                "prod": "Aura\\Framework_Project\\_Config\\Prod"
+            }
+        }
     }
 }
