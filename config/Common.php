@@ -36,10 +36,10 @@ class Common extends Config
 
     protected function modifyCliDispatcher(Container $di)
     {
-        $context = $di->get('cli_context');
-        $stdio = $di->get('cli_stdio');
+        $context = $di->get('aura/cli-kernel:context');
+        $stdio = $di->get('aura/cli-kernel:stdio');
         $logger = $di->get('aura/project-kernel:logger');
-        $dispatcher = $di->get('cli_dispatcher');
+        $dispatcher = $di->get('aura/cli-kernel:dispatcher');
         $dispatcher->setObject(
             'hello',
             function ($name = 'World') use ($context, $stdio, $logger) {
@@ -51,7 +51,7 @@ class Common extends Config
 
     public function modifyWebRouter(Container $di)
     {
-        $router = $di->get('web_router');
+        $router = $di->get('aura/web-kernel:router');
 
         $router->add('hello', '/')
                ->setValues(array('action' => 'hello'));
@@ -59,10 +59,10 @@ class Common extends Config
 
     public function modifyWebDispatcher($di)
     {
-        $dispatcher = $di->get('web_dispatcher');
+        $dispatcher = $di->get('aura/web-kernel:dispatcher');
 
         $dispatcher->setObject('hello', function () use ($di) {
-            $response = $di->get('web_response');
+            $response = $di->get('aura/web-kernel:response');
             $response->content->set('Hello World!');
         });
     }
