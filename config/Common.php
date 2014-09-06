@@ -8,7 +8,7 @@ class Common extends Config
 {
     public function define(Container $di)
     {
-        $di->set('logger', $di->lazyNew('Monolog\Logger'));
+        $di->set('aura/project-kernel:logger', $di->lazyNew('Monolog\Logger'));
     }
 
     public function modify(Container $di)
@@ -25,7 +25,7 @@ class Common extends Config
         $mode = $project->getMode();
         $file = $project->getPath("tmp/log/{$mode}.log");
 
-        $logger = $di->get('logger');
+        $logger = $di->get('aura/project-kernel:logger');
         $logger->pushHandler($di->newInstance(
             'Monolog\Handler\StreamHandler',
             array(
@@ -38,7 +38,7 @@ class Common extends Config
     {
         $context = $di->get('cli_context');
         $stdio = $di->get('cli_stdio');
-        $logger = $di->get('logger');
+        $logger = $di->get('aura/project-kernel:logger');
         $dispatcher = $di->get('cli_dispatcher');
         $dispatcher->setObject(
             'hello',
@@ -60,7 +60,7 @@ class Common extends Config
     public function modifyWebDispatcher($di)
     {
         $dispatcher = $di->get('web_dispatcher');
-        
+
         $dispatcher->setObject('hello', function () use ($di) {
             $response = $di->get('web_response');
             $response->content->set('Hello World!');
