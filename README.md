@@ -6,8 +6,8 @@ By "minimal" we mean *very* minimal. The package provides only a dependency
 injection container, a configuration system, a web router and dispatcher, a CLI dispatcher, a pair of web request and response objects, a pair of CLI context and standard I/O objects, and a logging instance.
 
 This minimal implementation should not be taken as "restrictive". The DI
-container, with its two-stage configuration system, allows a wide range of 
-programmatic service definitions. The router and dispatchers are built with 
+container, with its two-stage configuration system, allows a wide range of
+programmatic service definitions. The router and dispatchers are built with
 iterative refactoring in mind, so you can start with micro-framework-like
 closures, and work your way into more complex controller and command objects of
 your own design.
@@ -16,7 +16,7 @@ your own design.
 
 ### Requirements
 
-This project requires PHP 5.4 or later. Unlike Aura library packages, this 
+This project requires PHP 5.4 or later. Unlike Aura library packages, this
 project package has userland dependencies, which themselves may have other
 dependencies:
 
@@ -28,8 +28,8 @@ dependencies:
 
 Install this project via Composer to a `{$PROJECT_PATH}` of your choosing:
 
-    composer create-project --stability=dev aura/framework-project {$PROJECT_PATH}
-    
+    composer create-project aura/framework-project {$PROJECT_PATH}
+
 This will create the project skeleton and install all of the necessary packages.
 
 ### Tests
