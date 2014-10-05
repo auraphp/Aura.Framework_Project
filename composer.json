@@ -1,7 +1,7 @@
 {
     "name": "aura/framework-project",
     "type": "project",
-    "description": "A minimal web+CLI framework built from Aura v2 packages",
+    "description": "A minimal web+cli framework built from Aura v2 packages",
     "keywords": [
         "framework"
     ],
@@ -14,15 +14,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "aura/cli-kernel": "2.*@dev",
-        "aura/web-kernel": "2.*@dev",
-        "monolog/monolog": "1.*"
+        "aura/cli-kernel": "~2.0",
+        "aura/web-kernel": "~2.0",
+        "monolog/monolog": "~1.0"
     },
     "autoload": {
-        "psr-0": {
-            "": "src/"
-        },
         "psr-4": {
+            "": "src/",
             "Aura\\Framework_Project\\_Config\\": "config/"
         }
     },
