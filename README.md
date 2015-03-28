@@ -16,9 +16,9 @@ your own design.
 
 ### Requirements
 
-This project requires PHP 5.4 or later. Unlike Aura library packages, this
-project package has userland dependencies, which themselves may have other
-dependencies:
+This project requires PHP 5.4 or later; we recommend using the latest available version of PHP as a matter of principle.
+
+Unlike Aura library packages, this project package has userland dependencies, which themselves may have other dependencies:
 
 - [aura/cli-kernel](https://packagist.org/packages/aura/cli-kernel)
 - [aura/web-kernel](https://packagist.org/packages/aura/web-kernel)
@@ -36,7 +36,7 @@ This will create the project skeleton and install all of the necessary packages.
 
 [![Build Status](https://travis-ci.org/auraphp/Aura.Framework_Project.png)](https://travis-ci.org/auraphp/Aura.Framework_Project)
 
-This project has 100% code coverage with [PHPUnit](http://phpunit.de). To run the tests at the command line, go to the `tests/project/` directory and issue `./phpunit.sh`.
+To run the unit tests at the command line, issue `./phpunit.sh` at the package root. This requires [PHPUnit](http://phpunit.de/) to be available as `phpunit`.
 
 Alternatively, after you have installed the project, try the "hello world" CLI and web apps.
 
@@ -73,7 +73,6 @@ This package uses services defined by:
 
 - [Aura.Project_Kernel](https://github.com/auraphp/Aura.Project_Kernel#services)
 - [Aura.Cli_Kernel](https://github.com/auraphp/Aura.Cli_Kernel#services)
-
 - [Aura.Web_Kernel](https://github.com/auraphp/Aura.Web_Kernel#services)
 
 This project resets the following services:
