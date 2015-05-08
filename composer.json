@@ -12,7 +12,6 @@
             "homepage": "https://github.com/auraphp/Aura.Framework_Project/contributors"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "aura/cli-kernel": "~2.0",
         "aura/web-kernel": "~2.0",
